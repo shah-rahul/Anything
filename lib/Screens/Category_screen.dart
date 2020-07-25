@@ -6,7 +6,12 @@ class CategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Anything')),
+        appBar: AppBar(
+          title: Text(
+            'Anything',
+            style: Theme.of(context).textTheme.headline6,
+          ),
+        ),
         body: GridView(
             children: DUMMY_CATEGORIES
                 .map((catData) => CategoryItem(catData.color, catData.title))
